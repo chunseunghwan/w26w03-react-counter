@@ -1,0 +1,34 @@
+{
+  "compilerOptions": {
+    /* 기본 설정 */
+    "target": "ESNext",                     // 최신 JS 문법으로 컴파일
+    "lib": ["DOM", "DOM.Iterable", "ESNext"], // 브라우저 + 최신 JS API 지원
+    "module": "ESNext",                     // 모듈 시스템
+    "moduleResolution": "Node",             // Node 방식 모듈 해석
+    "jsx": "react-jsx",                     // React 17+ JSX 변환 방식
+    "allowJs": false,                       // JS 파일 허용 여부
+    "checkJs": false,                       // JS 타입 검사 여부
+    "resolveJsonModule": true,              // JSON import 허용
+    "isolatedModules": true,                // 각 파일을 독립적으로 컴파일
+
+    /* 타입 검사 강화 */
+    "strict": true,                         // 모든 엄격 모드 옵션 활성화
+    "noImplicitAny": true,                  // 암시적 any 금지
+    "strictNullChecks": true,               // null/undefined 체크
+    "forceConsistentCasingInFileNames": true, // 파일명 대소문자 일관성
+    "skipLibCheck": true,                   // 라이브러리 타입 검사 건너뛰기
+
+    /* 경로 설정 */
+    "baseUrl": "./src",                     // 절대 경로 기준
+    "paths": {
+      "@/*": ["*"]                          // 예: import Button from "@/components/Button"
+    },
+
+    /* 출력 설정 */
+    "outDir": "./dist",                     // 컴파일 결과물 폴더
+    "esModuleInterop": true,                // CommonJS 호환
+    "allowSyntheticDefaultImports": true    // default import 허용
+  },
+  "include": ["src"],                       // 타입 검사 대상
+  "exclude": ["node_modules", "dist"]       // 제외 폴더
+}
